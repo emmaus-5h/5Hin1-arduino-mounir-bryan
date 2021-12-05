@@ -87,7 +87,7 @@ void setup() {
   //lcd.setRGB(colorR, colorG, colorB);
 
   // Print a message to the LCD.
-  lcd.print("hello, world!");
+  lcd.print("Welkom!");
   delay(1000); // wacht zodat je ziet dat het display werkt
 }
 
@@ -101,7 +101,7 @@ void loop() {
     score = 0;
     lcd.clear();
     lcd.setCursor(0, 1);
-    lcd.print("Press red");
+    lcd.print("Press red and green");
     telafLoop();
     if (knopRood == HIGH) { // 2 seconden voorbij
       toestandStartTijd = millis();
@@ -114,7 +114,7 @@ void loop() {
   if (toestand == WACHT_OP_KNOP_IN) {
     lcd.clear();
     lcd.setCursor(0, 1);
-    lcd.print("Press green");
+    lcd.print("Press green and red");
     lcd.setCursor(0, 0);
     lcd.print(score);
     speelLoop();
